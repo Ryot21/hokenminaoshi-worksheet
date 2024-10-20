@@ -1,0 +1,464 @@
+// コンテンツ
+.c-container{
+	width: 100vw;
+	height: auto;
+}
+
+.c-contents{
+	&-inner{
+		width: 90%;
+		margin: auto;
+		@include min(500){width: 75%;}
+		@include min(768){width: 72.5%;}
+		@include min(1600){max-width: 1120px;}
+	}
+
+	&.-bg-lightBlue01{background: $site-color01;}
+	&.-bg-lightBlue02{background: $site-color05;}
+	&.-bg-white{background: $main-color--w;}
+	&.-bg-blue{background: $site-color02;}
+	&.-bg-green{background: $site-color03;}
+	&.-bg-orange{background: $site-color04;}
+
+	&.-f-view{//ファーストビュー
+		position: relative;
+		overflow: hidden;
+		.fvBg{
+			position: relative;
+			width: 100lvw;
+		}
+	}
+
+	&.-imgBg{//背景画像
+		position: relative;
+		&.-bg{//背景画像が大きくなると、コンテンツが間延びしてしまう場合
+			&.-c02{
+				overflow: hidden;
+				.imgBox{@include min(768){max-height: 1000px;}}
+			}
+			&.-c03 .Bg{
+				min-height: 1050px;
+				@include min(500) {min-height: 1150px;}
+				@include min(600) {min-height: 1320px;}
+				@include min(768) {min-height: 1340px;}
+				@include min(1100){min-height: 1740px;}
+				@include min(1200){min-height: 2080px;}
+				@include min(1600){min-height: 2310px;}
+			}
+			&.-c04{
+				overflow: hidden;
+				.imgBox{@include min(768){max-height: 940px;}}
+			}
+			&.-campaign{
+				.imgBox{@include min(768){max-height: 750px;}}
+			}
+		}
+		.c-contentsBox{
+			position: absolute;
+			// 要素の真ん中
+			&.-center{
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
+			}
+			// ヘッダーロゴ
+			&.-logo{
+				&-item01{//緑色の鳥
+					top: 54%;
+					left: 95.5%;
+					width: 5%;
+					@include min(768){
+						top: 17.5%;
+						left: 30.8%;
+						width: 2.3%;
+					}
+				}
+				&-item02{//黄色の鳥
+					top: 45%;
+					left: 100%;
+					width: 5%;
+					@include min(768){
+						top: 10%;
+						left: 33%;
+						width: 1.5%;
+					}
+				}
+			}
+			// コンテンツ関係
+			&.-contents-body{//.c-contents-innerと併用
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				height: 100%;
+			}
+			&.-contents01{
+				&-item01{//女性
+					top: 92%;
+					left: 86%;
+					transform: translate(-50%, -50%);
+					width: 31%;
+					z-index: 2;
+					@include min(768){
+						top: 91%;
+						left: 90%;
+						width: 18%;
+					}
+				}
+				&-item02{//男性
+					top: 90%;
+					left: 19%;
+					transform: translate(-50%, -50%);
+					width: 31%;
+					@include min(768){
+						left: 16%;
+						width: 17.5%;
+					}
+				}
+				&-item03{//Aさん
+					top: 35%;
+					left: 24%;
+					transform: translate(-50%, -50%);
+					width: 45%;
+					@include min(768){
+						top: 37%;
+						left: 16%;
+						width: 30%;
+					}
+				}
+				&-item04{//5,000円
+					top: 34%;
+					left: 80%;
+					transform: translate(-50%, -50%);
+					width: 37%;
+					@include min(768){
+						top: 50%;
+						left: 91%;
+						width: 30%;
+					}
+				}
+			}
+			&.-contents02{
+				&-title{
+					top: 20%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+				}
+
+				&-item01{//悩む男性
+					top: 74%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 40%;
+					@include min(768){
+						top: 75%;
+						width: 24%;
+					}
+				}
+				&-item02{
+					top: 44%;
+					left: 47.85%;
+					transform: translate(-50%, -50%);
+					width: 60%;
+					z-index: 2;
+					@include min(768){
+						top: 48%;
+						left: 49.85%;
+						width: 41%;
+					}
+				}
+				&-item03{
+					top: 54%;
+					left: 18%;
+					transform: translate(-50%, -50%);
+					width: 41%;
+					z-index: 1;
+					@include min(768){
+						top: 51%;
+						left: 20%;
+						width: 30%;
+					}
+				}
+				&-item04{
+					top: 57%;
+					left: 83%;
+					transform: translate(-50%, -50%);
+					width: 45%;
+					z-index: 3;
+					@include min(768){
+						top: 51%;
+						left: 82%;
+						width: 28%;
+					}
+				}
+				&-item05{
+					top: 73%;
+					left: 19%;
+					transform: translate(-50%, -50%);
+					width: 50%;
+					@include min(768){
+						top: 74%;
+						left: 22%;
+						width: 33%;
+					}
+				}
+				&-item06{
+					top: 75%;
+					left: 82%;
+					transform: translate(-50%, -50%);
+					width: 50%;
+					@include min(768){
+						top: 73%;
+						left: 80%;
+						width: 33%;
+					}
+				}
+			}
+			&.-contents03{
+				&-text{//それ...
+					top: 13%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 75%;
+					@include min(768){top: 10%;}
+					@include min(1600){top: 11%;}
+				}
+				&-item01{//セリフ > 顧客満足度
+					top: 30%;
+					left: 50%;
+					transform: translate(-28%, -50%);
+					width: 65%;
+					@include min(400){
+						top: 30.5%;
+						left: 47%;
+						width: 60%;
+					}
+					@include min(500) {top: 32%;}
+					@include min(768) {top: 24.5%;}
+					@include min(1600){top: 27%;}
+				}
+				&-item01-woman{//セリフ > 女性
+					top: 29%;
+					left: 19%;
+					transform: translate(-50%, -50%);
+					width: 27%;
+					@include min (400){
+						top: 31%;
+						left: 19%;
+						width: 20%;
+					}
+					@include min (500){top: 30.5%;}
+					@include min (768){
+						top: 23.5%;
+						width: 17%;
+					}
+					@include min(1600){top: 26%;}
+					.imgBox{
+						position: relative;
+						&::after{
+							content: "インプレーム専属 ファイナンシャルプランナー";
+							// width: 120%;
+							font-size: .75rem;
+							font-family: sans-serif;
+							color: $site-color02;
+							font-weight: bold;
+							text-align: center;
+							// text-wrap: balance;
+							word-break: keep-all;
+							position: absolute;
+							bottom: -25%;
+							left: 55%;
+							transform: translateX(-50%);
+							@include min(768){
+								font-size: 1rem;
+								bottom: -21%;
+							}
+						}
+					}
+				}
+				&-item02{//セリフ > インプレームが選ばれる理由
+					top: 84.5%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					@include min(400) {top: 82%;}
+					@include min(500) {top: 82%;}
+					@include min(768) {top: 82%;}
+					@include min(1600){top: 81%;}
+				}
+				&-item03{//お金アイコン
+					top: 78%;
+					left: 6.7%;
+					transform: translate(-50%, -50%);
+					width: 15%;
+					@include min(400){top: 78%;}
+					@include min(500){top: 75%;}
+					@include min(768){top: 77%;}
+					@include min(1600){top: 75.5%;}
+				}
+				&-item04{//グラフアイコン
+					top: 86%;
+					left: 94.5%;
+					transform: translate(-50%, -50%);
+					width: 14%;
+					@include min(400){top: 83.5%;}
+					@include min(500){top: 84%;}
+					@include min(768){top: 88.5%;}
+					@include min(1600){top: 87%;}
+				}
+				&-item05{//女性
+					bottom: 0%;
+					left: 14.5%;
+					transform: translateX(-50%);
+					width: 23%;
+					@include min(768) {
+						bottom: -1%;
+						width: 16%;
+					}
+					@include min(1200){
+						bottom: 0%;
+						width: 21%;
+						max-width: 160px;
+					}
+				}
+				&-item06{//ご夫婦
+					bottom: 0%;
+					left: 82.5%;
+					transform: translateX(-50%);
+					width: 30%;
+					@include min(768) {
+						bottom: -1%;
+						width: 20%;
+					}
+					@include min(1200){
+						bottom: 0%;
+						width: 27%;
+						max-width: 210px;
+					}
+				}
+
+				// Google口コミ
+				&-GoogleSlider{
+					top: 56%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					@include min(400) {top: 55%;}
+					@include min(500) {top: 55%;}
+					@include min(768) {top: 50%;}
+					@include min(1600){top: 50.5%;}
+				}
+			}
+			&.-contents04{
+				&-title{
+					top: 14%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					@include min(768){top: 17%;}
+				}
+			}
+				&.-flowItem{
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					&.-flowItem01{
+						top: 13.25%;
+						@include min(768){top: 20%;}
+					}
+					&.-flowItem02{
+						top: 31.5%;
+						@include min(768){top: 36%;}
+					}
+					&.-flowItem03{
+						top: 50%;
+						@include min(768){top: 52%;}
+					}
+					&.-flowItem04{
+						top: 69%;
+						@include min(768){top: 68%;}
+					}
+					&.-flowItem05{
+						top: 88%;
+						@include min(768){top: 84%;}
+					}
+
+					&.-flowItem-1007{
+						top: 57.25%;
+						@include min(768){top: 57%;}
+
+					}
+
+					.selif{
+						position: relative;
+						width: 23%;
+						@include min(768){width: 26%;}
+						&::after{
+							position: absolute;
+							top: 32%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							color: $site-color05;
+							font-size: clamp(1.4rem, 2vw, 2rem);
+							font-family: $f-e04;
+							font-weight: bold;
+							letter-spacing: .2rem;
+						}
+						&.-no1{&::after{content: "Flow01";}}
+						&.-no2{&::after{content: "Flow02";}}
+						&.-no3{&::after{content: "Flow03";}}
+						&.-no4{&::after{content: "Flow04";}}
+						&.-no5{&::after{content: "Flow05";}}
+
+					}
+				}
+			&.-campaign{
+				&-modal{
+					top: 60%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					@include min(768){
+						top: 50%;
+					}
+				}
+				&-man{
+					bottom: 0;
+					right: -10%;
+					width: 25%;
+				}
+				&-woman{
+					bottom: 0;
+					left: -10%;
+					width: 25%;
+				}
+				&-serif{
+					top: 8%;
+					right: -5%;
+					width: 33%;
+					@include min(768){
+						top: 0;
+						right: -2%;
+						width: 30%;
+					}
+				}
+			}
+		}
+	}
+
+	&.-returnBtn{// 戻るボタン
+		a{
+			display: block;
+			width: 20%;
+			border-radius: 5px;
+			overflow: hidden;
+			margin: auto;
+			text-align: center;
+			box-shadow: 1px 1px gray;
+			@include min(768){width: 6%;}
+			@include min(1400){width: 7%;}
+		}
+	}
+}
