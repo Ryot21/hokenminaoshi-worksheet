@@ -1,12 +1,22 @@
 // コンテンツ
 .c-container{
-	width: 100vw;
+	width: 100%;
 	height: auto;
 }
 
 .c-contents{
+	&-inner_sp{
+		width: 95%;
+		margin: auto;
+		@include min(500){width: 75%;}
+		@include min(768){width: 62.5%;}
+		@include min(1600){max-width: 780px;}
+		&.-header{
+			@include max(768){width: 100vw;}
+		}
+	}
 	&-inner{
-		width: 90%;
+		width: 95%;
 		margin: auto;
 		@include min(500){width: 75%;}
 		@include min(768){width: 72.5%;}
@@ -65,26 +75,11 @@
 			}
 			// ヘッダーロゴ
 			&.-logo{
-				&-item01{//緑色の鳥
-					top: 54%;
-					left: 95.5%;
-					width: 5%;
-					@include min(768){
-						top: 17.5%;
-						left: 30.8%;
-						width: 2.3%;
-					}
-				}
-				&-item02{//黄色の鳥
-					top: 45%;
-					left: 100%;
-					width: 5%;
-					@include min(768){
-						top: 10%;
-						left: 33%;
-						width: 1.5%;
-					}
-				}
+				top: 50%;
+				left: 15%;
+				transform: translate(-50%, -50%);
+				width: 25%;
+				@include min(768){width: 20%;}
 			}
 			// コンテンツ関係
 			&.-contents-body{//.c-contents-innerと併用
