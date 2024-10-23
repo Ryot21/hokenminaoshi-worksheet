@@ -25,7 +25,7 @@
     <!--// デプロイ前に確認・サンプル -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/luminous.min.js"></script>
-
+    <script src="js/form.js"></script>
 
 
     <!-- Google Analytics（GA4） -->
@@ -66,7 +66,6 @@
             </div>
         </header>
 
-
         <!-- 固定アイテム / お問い合わせ -->
         <!-- <a href="https://s.lmes.jp/landing-qr/1661078431-n9OxlRrW?uLand=Rb0UaQ" class="c-btn-contact popupOut a-fadeUp -sp25">
             <div class="imgBox">
@@ -74,7 +73,6 @@
                 <img class="sp"    src="images/item/follow-sp.png" alt="公式LINEのお問い合わせはコチラ ~セカンドオピニオンも大歓迎~">    
             </div>
         </a> -->
-
 
         <!-- コンテンツ -->
         <main class="c-container">
@@ -86,31 +84,99 @@
             </div>
 
             <!-- アンケートエリア -->
-            <div class="c-contents -bg-blue mgt-12 mgt-12s pdt10 pdt10s">
-                <div class="c-contents w90 pdt5 pdb5 colorBox">
-                    <h2 class="w30 mgb5"><img src="images/title/question-title.png" alt="Question"></h2>
+            <div class="c-contents -bg-blue mgt-12 mgt-12s pdt10 pdb10 pdt10s pdb10s">
+                <div class="c-contents w90 pdt10 pdb10 pdt10s pdb10s colorBox">
+                    <h2 class="w30 mgb5 mgb5s"><img src="images/title/question-title.png" alt="Question"></h2>
                     <!-- 現在地 -->
-                    <div id="current" class="c-current w80 mgb5">
+                    <div id="current" class="c-current w80 mgb10 mgb10s">
                         <ul class="c-flex -col4 -jc-sb">
-                            <li class="flexItem -current">
+                            <li class="flexItem -current -current01">
                                 <div class="imgBox"><img src="images/item/flow/current01.png" alt="Q1"></div>
                             </li>
-                            <li class="flexItem -current">
+                            <li class="flexItem -current -current02">
                                 <div class="imgBox"><img src="images/item/flow/current02.png" alt="Q2"></div>
                             </li>
-                            <li class="flexItem ">
+                            <li class="flexItem -current -current03">
                                 <div class="imgBox"><img src="images/item/flow/current03.png" alt="Q3"></div>
                             </li>
-                            <li class="flexItem ">
+                            <li class="flexItem -current -current04">
                                 <div class="imgBox"><img src="images/item/flow/current04.png" alt="Q4"></div>
                             </li>
                         </ul>
                     </div>
-                    <!-- Q1 -->
+
+                    <!-- Form01 -->
+                    <form id="form1" class="c-form w90">
+                        <!-- Q1 -->
+                        <div id="Q01" class="mgb15 mgb15s">
+                            <div class="imgBox mgb5 mgb5s"><img src="images/title/question-01.png" alt="Q1. 現在、何らかの保険に加入していますか？"></div>
+                            <ul class="c-flex -col2 -jc-sb">
+                                <li class="flexItem">
+                                    <div class="c-form-btn">
+                                        <input type="radio" id="q1-y" name="q01" value="q1-y" required>
+                                        <label class="y s-M -ls-1 -white" for="q1">
+                                            はい
+                                        </label>    
+                                    </div>
+                                </li>
+                                <li class="flexItem">
+                                    <div class="c-form-btn">
+                                        <input type="radio" id="q1-n" name="q01" value="q1-n" required>
+                                        <label class="n s-M -ls-1 -white" for="q1">
+                                            いいえ
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Q2 -->
+                        <div id="Q02" class="mgb15 mgb15s">
+                            <div class="imgBox mgb5 mgb5s"><img src="images/title/question-02.png" alt="Q2. 現在、どの保険に加入していますか？"></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-01" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-01">医療保険</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-02" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-02">がん保険</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-03" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-03">変額保険</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-04" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-04">学資保険</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-05" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-05">個人年金保険</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-06" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-06">介護保険</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-07" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-07">養老保険</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-08" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-08">就業不能保険</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-09" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-09">終身保険</label></div>
+                            <p class="s-SS -right">(複数選択可能)</p>
+                        </div>
+                        <!-- Q3 -->
+                        <div id="Q03" class="mgb15 mgb15s">
+                            <div class="imgBox mgb5 mgb5s"><img src="images/title/question-03.png" alt="Q3. 見直しをすることで削減できることを知っていますか？"></div>
+                            <ul class="c-flex -col2 -jc-sb">
+                                <li class="flexItem">
+                                    <div class="c-form-btn">
+                                        <input type="radio" id="q3-y" name="q03" value="q3-y" >
+                                        <label class="y s-M -ls-1 -white" for="q3">
+                                            はい
+                                        </label>    
+                                    </div>
+                                </li>
+                                <li class="flexItem">
+                                    <div class="c-form-btn">
+                                        <input type="radio" id="q3-n" name="q03" value="q3-n" >
+                                        <label class="n s-M -ls-1 -white" for="q3">
+                                            いいえ
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Q4 -->
+                        <div id="Q04" class="">
+                            <div class="imgBox mgb5 mgb5s"><img src="images/title/question-04.png" alt="Q4. あなたはどのくらいの頻度で保険の見直しや更新を行っていますか？"></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-01" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-01">「毎年」</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-02" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-02">「数年に一度」</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-03" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-03">「5年以上前から変更していない」</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-04" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-04">「特に更新の予定はない」</label></div>
+                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-05" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-05">「その他」</label></div>
+                            <p class="s-SS -right">(複数選択可能)</p>
+                        </div>
+                    </form>
                     
-                    <!-- Q2 -->
-                    <!-- Q3 -->
-                    <!-- Q4 -->
                 </div>
             </div>
         </main><!-- //コンテンツ -->

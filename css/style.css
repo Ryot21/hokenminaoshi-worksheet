@@ -3102,12 +3102,12 @@ button.swiper-pagination-bullet {
 
 .colorBox {
   background: #ffffff;
-  padding: 3% 0 6%;
+  padding: 3% 0 0;
   border-radius: 5px;
 }
 @media (width >= 768px) {
   .colorBox {
-    padding: 3% 0 4%;
+    padding: 3% 0 0;
   }
 }
 
@@ -4036,7 +4036,7 @@ button.swiper-pagination-bullet {
 }
 @media (width >= 1600px) {
   .c-contents-inner_sp {
-    max-width: 780px;
+    max-width: 580px;
   }
 }
 @media (768px >= width) {
@@ -5248,7 +5248,7 @@ button.swiper-pagination-bullet {
     width: 40%;
   }
 }
-.c-flex.-col2_2 .flexItem {
+.c-flex.-col2 .flexItem {
   width: 48.5%;
 }
 .c-flex.-col2M1_3 .flexItem {
@@ -6852,8 +6852,65 @@ a {
 .c-current .flexItem .imgBox img {
   background: #ebebeb;
 }
-.c-current .flexItem.-current .imgBox img {
+.c-current .flexItem.-current.selected .imgBox img {
   background: #194299;
+}
+
+.c-form-btn {
+  position: relative;
+  width: 100%;
+  padding: 1.25rem;
+}
+.c-form-btn label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  font-size: 1.6rem;
+  padding: 1rem;
+  background: #ebebeb;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0.9;
+  transition: all 0.25s;
+}
+.c-form-btn:hover label {
+  transform: scale(1.05);
+  opacity: 1;
+}
+.c-form-btn:hover label.y {
+  background: #ED604F;
+}
+.c-form-btn:hover label.n {
+  background: #668AD1;
+}
+.c-form label {
+  align-items: center;
+}
+.c-form input[name=q01],
+.c-form input[name=q03] {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.c-form input[name=q01]:checked ~ .y,
+.c-form input[name=q03]:checked ~ .y {
+  background: #ED604F;
+}
+.c-form input[name=q01]:checked ~ .n,
+.c-form input[name=q03]:checked ~ .n {
+  background: #668AD1;
+}
+.c-form input[name=q02],
+.c-form input[name=q04] {
+  margin: 0 1% 0 0;
 }
 
 .p-top {

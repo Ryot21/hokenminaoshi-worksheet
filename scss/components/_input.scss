@@ -1,0 +1,63 @@
+
+.c-form{
+    &-btn{
+        position: relative;
+        width: 100%;
+        padding: 1.25rem;
+        label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            font-size: 1.6rem;
+            padding: 1rem;
+            background: #ebebeb;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            opacity: .9;
+            transition: all .25s;
+        }
+        &:hover{
+            label{
+                transform: scale(1.05);
+                opacity: 1;
+                &.y{ background: $main-color--yes;}
+                &.n{ background: $main-color--no;}
+
+            }
+        }
+    }
+    label{
+        align-items: center;
+    }
+
+    // Q1, Q3
+    input[name="q01"],
+    input[name="q03"] {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        transform: scale(1);
+        transition: all .5s;
+    }
+    input[name="q01"]:checked ~,
+    input[name="q03"]:checked ~ {
+        .y{ background: $main-color--yes;}
+        .n{ background: $main-color--no;}
+    }
+
+    // Q2, Q4
+    input[name="q02"],
+    input[name="q04"] {
+        margin: 0 1% 0 0;
+    }
+}
+
+#form1{
+
+}

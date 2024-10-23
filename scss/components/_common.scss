@@ -193,10 +193,10 @@
 
 .colorBox{
     background: $main-color--w;
-    padding: 3% 0 6%;
+    padding: 3% 0 0;
     border-radius: 5px;
     @include min(768){
-        padding: 3% 0 4%;
+        padding: 3% 0 0;
     }
 }
 

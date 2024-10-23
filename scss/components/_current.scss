@@ -1,6 +1,5 @@
 .c-current{
     .flexItem{
-
         .imgBox{
             position: relative;
             background: $main-color--gray;
@@ -19,7 +18,7 @@
         .imgBox img{
             background: $main-color--gray;
         }
-        &.-current{
+        &.-current.selected{
             .imgBox img{background: $site-color02;}
         }
     }
