@@ -8,8 +8,8 @@
 	&-inner_sp{
 		width: 95%;
 		margin: auto;
-		@include min(500){width: 75%;}
-		@include min(768){width: 62.5%;}
+		@include min(500){width: 65%;}
+		@include min(1000){width: 47.5%;}
 		@include min(1600){max-width: 780px;}
 		&.-header{
 			@include max(768){width: 100vw;}
