@@ -238,3 +238,14 @@
     border-radius: 20px;
     overflow: hidden;
 }
+
+.error-message{
+    display: none;
+    font-size: 1rem;
+    color: #df2323 !important;
+    font-weight: bold;
+    text-align: left;
+    &.active {
+        display: block; /* エラー時に表示 */
+    }
+}

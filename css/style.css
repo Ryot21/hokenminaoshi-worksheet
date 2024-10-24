@@ -3145,6 +3145,17 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.error-message {
+  display: none;
+  font-size: 1rem;
+  color: #df2323 !important;
+  font-weight: bold;
+  text-align: left;
+}
+.error-message.active {
+  display: block; /* エラー時に表示 */
+}
+
 .c-header {
   width: 100%;
   height: auto;
@@ -4672,7 +4683,7 @@ label.required::after {
 input,
 select,
 textarea {
-  padding: 1.5% 1%;
+  padding: 1.5% 2%;
   border: 1px solid #636363;
   border-radius: 5px;
 }

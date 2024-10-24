@@ -22,16 +22,26 @@ document.addEventListener("DOMContentLoaded", function() {
     const popup01 = document.getElementById('popup01');
     const popupBtn = document.getElementById('popup01-btn');
 
+    // エラーメッセージの要素を作成
+    const errorMessage = document.createElement('div');
+    errorMessage.className = 'error-message';
+    errorMessage.textContent = '選択してください';
+
+    // 各セクションにエラーメッセージを追加
+    q1Section.appendChild(errorMessage.cloneNode(true));
+    q2Section.appendChild(errorMessage.cloneNode(true));
+    q3Section.appendChild(errorMessage.cloneNode(true));
+    q4Section.appendChild(errorMessage.cloneNode(true));
+
     // 前Qが選択されているかチェックする関数
     function isQ1Selected() { return [...q1RadioBtn].some(radio => radio.checked); }
-    // function isQ2Selected() { return [...q2RadioBtn].some(radio => radio.checked); }
+    function isQ2Selected() { return [...q2RadioBtn].some(radio => radio.checked); }
     function isQ3Selected() { return [...q3RadioBtn].some(radio => radio.checked); }
     function isQ4Selected() { return [...q4RadioBtn].some(radio => radio.checked); }
 
     // 全ての質問が選択されているかチェックする関数
     function areAllQuestionsSelected() {
-        return isQ1Selected() && isQ3Selected() && isQ4Selected();
-        // return isQ1Selected() && isQ2Selected() && isQ3Selected() && isQ4Selected();
+        return isQ1Selected() && isQ2Selected() && isQ3Selected() && isQ4Selected();
     }
 
     // ボタンの有効/無効を切り替える関数
@@ -48,48 +58,49 @@ document.addEventListener("DOMContentLoaded", function() {
     // 初期状態でボタンを無効化
     togglePopupBtn();
 
+    // エラーメッセージの表示とスクロール位置を中央にする関数
+    function showError(section) {
+        const message = section.querySelector('.error-message');
+        message.classList.add('active');
+        section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => message.classList.remove('active'), 2000);  // 2秒後にエラーメッセージを非表示
+    }
+
     // ラジオボタンにイベントリスナーを追加
     q1RadioBtn.forEach(function(radio) {
         radio.addEventListener('change', function() {
             if (radio.checked) {
-                // 選択されている場合はスタイルを追加
                 current01.classList.add('selected');
-                // Q1が選択されたらQ2にスクロール
-                setTimeout(() => q2Section.scrollIntoView({ behavior: 'smooth' }), 200); // スクロールにタイムアウトを追加
                 togglePopupBtn(); // ボタン状態をチェック
             }
         });
     });
 
-    // q2RadioBtn.forEach(function(radio) {
-    //     radio.addEventListener('change', function(event) {
-    //         if (!isQ1Selected()) {
-    //             // Q1が選択されていない場合、Q2の選択をキャンセルし、Q1にスクロール
-    //             event.preventDefault();  // Q2の選択をキャンセル
-    //             q1Section.scrollIntoView({ behavior: 'smooth' });  // Q1にスクロール
-    //             return;
-    //         }
-    //         if (radio.checked) {
-    //             // 選択されている場合はスタイルを追加
-    //             current02.classList.add('selected');
-    //             setTimeout(() => q3Section.scrollIntoView({ behavior: 'smooth' }), 200);
-    //             togglePopupBtn(); // ボタン状態をチェック
-    //         }
-    //     });
-    // });
+    q2RadioBtn.forEach(function(radio) {
+        radio.addEventListener('change', function(event) {
+            if (!isQ1Selected()) {
+                event.preventDefault();  // Q2の選択をキャンセル
+                radio.checked = false;   // 現在のラジオボタンの選択をクリア
+                showError(q1Section);    // エラーメッセージを表示してスクロール
+                return;
+            }
+            if (radio.checked) {
+                current02.classList.add('selected');
+                togglePopupBtn(); // ボタン状態をチェック
+            }
+        });
+    });
 
     q3RadioBtn.forEach(function(radio) {
         radio.addEventListener('change', function(event) {
             if (!isQ2Selected()) {
-                // Q2が選択されていない場合、Q3の選択をキャンセルし、Q2にスクロール
                 event.preventDefault();  // Q3の選択をキャンセル
-                q2Section.scrollIntoView({ behavior: 'smooth' });  // Q2にスクロール
+                radio.checked = false;   // 現在のラジオボタンの選択をクリア
+                showError(q2Section);    // エラーメッセージを表示してスクロール
                 return;
             }
             if (radio.checked) {
-                // 選択されている場合はスタイルを追加
                 current03.classList.add('selected');
-                setTimeout(() => q4Section.scrollIntoView({ behavior: 'smooth' }), 200);
                 togglePopupBtn(); // ボタン状態をチェック
             }
         });
@@ -98,9 +109,9 @@ document.addEventListener("DOMContentLoaded", function() {
     q4RadioBtn.forEach(function(radio) {
         radio.addEventListener('change', function(event) {
             if (!isQ3Selected()) {
-                // Q3が選択されていない場合、Q4の選択をキャンセルし、Q3にスクロール
                 event.preventDefault();  // Q4の選択をキャンセル
-                q3Section.scrollIntoView({ behavior: 'smooth' });  // Q3にスクロール
+                radio.checked = false;   // 現在のラジオボタンの選択をクリア
+                showError(q3Section);    // エラーメッセージを表示してスクロール
                 return;
             }
             if (radio.checked) {
@@ -109,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-
 
     // ポップアップの表示と非表示の制御
     popupTrigger.addEventListener('click', function() {
