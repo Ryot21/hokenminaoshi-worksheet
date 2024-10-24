@@ -149,6 +149,15 @@
     }
 }
 
+.c-borderBtm{
+    &.-solid{
+        border-bottom: 1px solid $main-color--gray;
+        @include min(768){
+            border-bottom: 1px solid $main-color--gray;
+        }
+    }
+}
+
 .setubi-title{
     position: relative;
     .m-logo{

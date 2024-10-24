@@ -17,6 +17,7 @@
         z-index: 99999;
         opacity: 1;
     }
+
 }
 .popup{
     &-open {
@@ -62,7 +63,7 @@
             width: 100%;
             height: 100%;
         }
-        &.-popImg {
+        &.-scroll {
             height: 80lwh;
             padding: 5%;
             overflow-y: scroll;

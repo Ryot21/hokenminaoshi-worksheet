@@ -83,102 +83,277 @@
                 </div>
             </div>
 
-            <!-- アンケートエリア -->
-            <div class="c-contents -bg-blue mgt-12 mgt-12s pdt10 pdb10 pdt10s pdb10s">
-                <div class="c-contents w90 pdt10 pdb10 pdt10s pdb10s colorBox">
-                    <h2 class="w30 mgb5 mgb5s"><img src="images/title/question-title.png" alt="Question"></h2>
-                    <!-- 現在地 -->
-                    <div id="current" class="c-current w80 mgb10 mgb10s">
-                        <ul class="c-flex -col4 -jc-sb">
-                            <li class="flexItem -current -current01">
-                                <div class="imgBox"><img src="images/item/flow/current01.png" alt="Q1"></div>
-                            </li>
-                            <li class="flexItem -current -current02">
-                                <div class="imgBox"><img src="images/item/flow/current02.png" alt="Q2"></div>
-                            </li>
-                            <li class="flexItem -current -current03">
-                                <div class="imgBox"><img src="images/item/flow/current03.png" alt="Q3"></div>
-                            </li>
-                            <li class="flexItem -current -current04">
-                                <div class="imgBox"><img src="images/item/flow/current04.png" alt="Q4"></div>
-                            </li>
-                        </ul>
-                    </div>
+            <!-- Form01 -->
+            <form id="form1" class="c-form w90" method="post">
 
-                    <!-- Form01 -->
-                    <form id="form1" class="c-form w90">
-                        <!-- Q1 -->
-                        <div id="Q01" class="mgb15 mgb15s">
-                            <div class="imgBox mgb5 mgb5s"><img src="images/title/question-01.png" alt="Q1. 現在、何らかの保険に加入していますか？"></div>
-                            <ul class="c-flex -col2 -jc-sb">
-                                <li class="flexItem">
-                                    <div class="c-form-btn">
-                                        <input type="radio" id="q1-y" name="q01" value="q1-y" required>
-                                        <label class="y s-M -ls-1 -white" for="q1">
-                                            はい
-                                        </label>    
-                                    </div>
+                <!-- アンケートエリア -->
+                <div class="c-contents -bg-blue mgt-12 mgt-12s pdt10 pdb10 pdt10s pdb10s">
+                    <div class="c-contents w90 pdt10 pdb10 pdt10s pdb10s colorBox">
+                        <h2 class="w30 mgb5 mgb5s"><img src="images/title/question-title.png" alt="Question"></h2>
+                        <!-- 現在地 -->
+                        <div id="current" class="c-current w80 mgb10 mgb10s">
+                            <ul class="c-flex -col4 -jc-sb">
+                                <li class="flexItem -current -current01">
+                                    <div class="imgBox"><img src="images/item/flow/current01.png" alt="Q1"></div>
                                 </li>
-                                <li class="flexItem">
-                                    <div class="c-form-btn">
-                                        <input type="radio" id="q1-n" name="q01" value="q1-n" required>
-                                        <label class="n s-M -ls-1 -white" for="q1">
-                                            いいえ
-                                        </label>
-                                    </div>
+                                <li class="flexItem -current -current02">
+                                    <div class="imgBox"><img src="images/item/flow/current02.png" alt="Q2"></div>
+                                </li>
+                                <li class="flexItem -current -current03">
+                                    <div class="imgBox"><img src="images/item/flow/current03.png" alt="Q3"></div>
+                                </li>
+                                <li class="flexItem -current -current04">
+                                    <div class="imgBox"><img src="images/item/flow/current04.png" alt="Q4"></div>
                                 </li>
                             </ul>
                         </div>
-                        <!-- Q2 -->
-                        <div id="Q02" class="mgb15 mgb15s">
-                            <div class="imgBox mgb5 mgb5s"><img src="images/title/question-02.png" alt="Q2. 現在、どの保険に加入していますか？"></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-01" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-01">医療保険</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-02" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-02">がん保険</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-03" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-03">変額保険</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-04" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-04">学資保険</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-05" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-05">個人年金保険</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-06" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-06">介護保険</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-07" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-07">養老保険</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-08" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-08">就業不能保険</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q2-09" name="q02" value="q2-y" required><label class="s-S -ls-1" for="q2-09">終身保険</label></div>
-                            <p class="s-SS -right">(複数選択可能)</p>
+
+                        <div class="w90">
+                            <!-- Q1 -->
+                            <div id="Q01" class="mgb15 mgb15s">
+                                <div class="imgBox mgb5 mgb5s"><img src="images/title/question-01.png" alt="Q1. 現在、何らかの保険に加入していますか？"></div>
+                                <ul class="c-flex -col2 -jc-sb">
+                                    <li class="flexItem">
+                                        <div class="c-form-btn">
+                                            <input type="radio" id="q1-y" name="q01" value="q1-y" required>
+                                            <label class="y s-M -ls-1 -white" for="q1">
+                                                はい
+                                            </label>    
+                                        </div>
+                                    </li>
+                                    <li class="flexItem">
+                                        <div class="c-form-btn">
+                                            <input type="radio" id="q1-n" name="q01" value="q1-n" required>
+                                            <label class="n s-M -ls-1 -white" for="q1">
+                                                いいえ
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Q2 -->
+                            <div id="Q02" class="mgb15 mgb15s">
+                                <div class="imgBox mgb5 mgb5s"><img src="images/title/question-02.png" alt="Q2. 現在、どの保険に加入していますか？"></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-01" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-01">医療保険</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-02" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-02">がん保険</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-03" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-03">変額保険</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-04" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-04">学資保険</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-05" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-05">個人年金保険</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-06" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-06">介護保険</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-07" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-07">養老保険</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-08" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-08">就業不能保険</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q2-09" name="q02" value="q2-y"><label class="s-S -ls-1" for="q2-09">終身保険</label></div>
+                                <p class="s-SS -right">(複数選択可能)</p>
+                            </div>
+                            <!-- Q3 -->
+                            <div id="Q03" class="mgb15 mgb15s">
+                                <div class="imgBox mgb5 mgb5s"><img src="images/title/question-03.png" alt="Q3. 見直しをすることで削減できることを知っていますか？"></div>
+                                <ul class="c-flex -col2 -jc-sb">
+                                    <li class="flexItem">
+                                        <div class="c-form-btn">
+                                            <input type="radio" id="q3-y" name="q03" value="q3-y" >
+                                            <label class="y s-M -ls-1 -white" for="q3">
+                                                はい
+                                            </label>    
+                                        </div>
+                                    </li>
+                                    <li class="flexItem">
+                                        <div class="c-form-btn">
+                                            <input type="radio" id="q3-n" name="q03" value="q3-n" >
+                                            <label class="n s-M -ls-1 -white" for="q3">
+                                                いいえ
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Q4 -->
+                            <div id="Q04" class="">
+                                <div class="imgBox mgb5 mgb5s"><img src="images/title/question-04.png" alt="Q4. あなたはどのくらいの頻度で保険の見直しや更新を行っていますか？"></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q4-01" name="q04" value="q4-y"><label class="s-S -ls-1" for="q4-01">「毎年」</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q4-02" name="q04" value="q4-y"><label class="s-S -ls-1" for="q4-02">「数年に一度」</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q4-03" name="q04" value="q4-y"><label class="s-S -ls-1" for="q4-03">「5年以上前から変更していない」</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q4-04" name="q04" value="q4-y"><label class="s-S -ls-1" for="q4-04">「特に更新の予定はない」</label></div>
+                                <div class="mgb2 mgb2s"><input type="checkbox" id="q4-05" name="q04" value="q4-y"><label class="s-S -ls-1" for="q4-05">「その他」</label></div>
+                                <p class="s-SS -right">(複数選択可能)</p>
+                            </div>
                         </div>
-                        <!-- Q3 -->
-                        <div id="Q03" class="mgb15 mgb15s">
-                            <div class="imgBox mgb5 mgb5s"><img src="images/title/question-03.png" alt="Q3. 見直しをすることで削減できることを知っていますか？"></div>
-                            <ul class="c-flex -col2 -jc-sb">
-                                <li class="flexItem">
-                                    <div class="c-form-btn">
-                                        <input type="radio" id="q3-y" name="q03" value="q3-y" >
-                                        <label class="y s-M -ls-1 -white" for="q3">
-                                            はい
-                                        </label>    
-                                    </div>
-                                </li>
-                                <li class="flexItem">
-                                    <div class="c-form-btn">
-                                        <input type="radio" id="q3-n" name="q03" value="q3-n" >
-                                        <label class="n s-M -ls-1 -white" for="q3">
-                                            いいえ
-                                        </label>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Q4 -->
-                        <div id="Q04" class="">
-                            <div class="imgBox mgb5 mgb5s"><img src="images/title/question-04.png" alt="Q4. あなたはどのくらいの頻度で保険の見直しや更新を行っていますか？"></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-01" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-01">「毎年」</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-02" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-02">「数年に一度」</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-03" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-03">「5年以上前から変更していない」</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-04" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-04">「特に更新の予定はない」</label></div>
-                            <div class="mgb2 mgb2s"><input type="checkbox" id="q4-05" name="q04" value="q4-y" required><label class="s-S -ls-1" for="q4-05">「その他」</label></div>
-                            <p class="s-SS -right">(複数選択可能)</p>
-                        </div>
-                    </form>
-                    
+                    </div>
                 </div>
-            </div>
+
+                <!-- cvエリア -->
+                <div class="c-contents -imgBg">
+                    <div class="imgBox"><img src="images/bg/cv-bg.png" alt="アンケートのご協力ありがとうございました！ キャンペーン期間：2024年12月16日まで"></div>
+                    <div class="c-contentsBox -cv-btn">
+                        <label id="popup01-btn" class="s-S popup -color01 popup-open" for="popup01">
+                            <img src="images/item/cv-btn.png" alt="今すぐご相談">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- モーダル -->
+                <div class="">
+                    <input type="checkbox" id="popup01" ><!-- popup01 -->
+                    <label class="popup-overlay" for="popup01"></label>
+                    <div class="popup-window -scroll c-contents-inner_sp -modal">
+                        <!-- 閉じるボタン -->
+                        <label class="popup-close" for="popup01">
+                            <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="0" y1="0" x2="18" y2="18" stroke="white" stroke-width="3"></line>
+                                <line x1="0" y1="18" x2="18" y2="0" stroke="white" stroke-width="3"></line>
+                            </svg>
+                        </label>
+                        <!-- コンテンツ -->
+                        <h2 class="mgb5 mgb5s"><img src="images/title/question-modal-title.png" alt="Question"></h2>
+                        <!-- Q05 ご面談の種類 -->
+                        <div id="Q05" class="c-borderBtm -solid mgb5 mgb5s">
+                            <dl class="mgb5 mgb5s">
+                                <dd class="mgb2 mgb2s">
+                                    <label class="required s-M -left -ws-n -ls-2" for="meeting">ご面談の種類</label>
+                                </dd>
+                                <dt>
+                                    <div class="c-select">
+                                        <select class="s-S" name="meeting" required>
+                                            <option value="">選択してください</option>
+                                            <option value="オンライン">オンライン</option>
+                                            <option value="対面">対面</option>
+                                        </select>
+                                    </div>
+                                </dt>
+                            </dl>
+                        </div>
+                        <!-- Q06 お住いの都道府県 -->
+                        <div id="Q06" class="c-borderBtm -solid mgb5 mgb5s">
+                            <dl class="mgb5 mgb5s">
+                                <dd class="mgb2 mgb2s">
+                                    <label class="required s-M -left -ws-n -ls-2" for="prefectures">お住いの都道府県</label>
+                                </dd>
+                                <dt>
+                                    <div class="c-select">
+                                        <select class="s-S" name="prefectures" required>
+                                            <option value="" selected>選択してください</option>
+                                            <option value="北海道">北海道</option>
+                                            <option value="青森県">青森県</option>
+                                            <option value="岩手県">岩手県</option>
+                                            <option value="宮城県">宮城県</option>
+                                            <option value="秋田県">秋田県</option>
+                                            <option value="山形県">山形県</option>
+                                            <option value="福島県">福島県</option>
+                                            <option value="茨城県">茨城県</option>
+                                            <option value="栃木県">栃木県</option>
+                                            <option value="群馬県">群馬県</option>
+                                            <option value="埼玉県">埼玉県</option>
+                                            <option value="千葉県">千葉県</option>
+                                            <option value="東京都">東京都</option>
+                                            <option value="神奈川県">神奈川県</option>
+                                            <option value="新潟県">新潟県</option>
+                                            <option value="富山県">富山県</option>
+                                            <option value="石川県">石川県</option>
+                                            <option value="福井県">福井県</option>
+                                            <option value="山梨県">山梨県</option>
+                                            <option value="長野県">長野県</option>
+                                            <option value="岐阜県">岐阜県</option>
+                                            <option value="静岡県">静岡県</option>
+                                            <option value="愛知県">愛知県</option>
+                                            <option value="三重県">三重県</option>
+                                            <option value="滋賀県">滋賀県</option>
+                                            <option value="京都府">京都府</option>
+                                            <option value="大阪府">大阪府</option>
+                                            <option value="兵庫県">兵庫県</option>
+                                            <option value="奈良県">奈良県</option>
+                                            <option value="和歌山県">和歌山県</option>
+                                            <option value="鳥取県">鳥取県</option>
+                                            <option value="島根県">島根県</option>
+                                            <option value="岡山県">岡山県</option>
+                                            <option value="広島県">広島県</option>
+                                            <option value="山口県">山口県</option>
+                                            <option value="徳島県">徳島県</option>
+                                            <option value="香川県">香川県</option>
+                                            <option value="愛媛県">愛媛県</option>
+                                            <option value="高知県">高知県</option>
+                                            <option value="福岡県">福岡県</option>
+                                            <option value="佐賀県">佐賀県</option>
+                                            <option value="長崎県">長崎県</option>
+                                            <option value="熊本県">熊本県</option>
+                                            <option value="大分県">大分県</option>
+                                            <option value="宮崎県">宮崎県</option>
+                                            <option value="鹿児島県">鹿児島県</option>
+                                            <option value="沖縄県">沖縄県</option>
+                                        </select>
+                                    </div>
+                                </dt>
+                            </dl>
+                        </div>
+                        <!-- Q07 生年月日 -->
+                        <div id="Q06" class="c-borderBtm -solid mgb5 mgb5s">
+                            <dl class="mgb5 mgb5s">
+                                <dd class="mgb2 mgb2s">
+                                    <label class="required s-M -left -ws-n -ls-2" for="birthday">生年月日</label>
+                                </dd>
+                                <dt>
+                                    <input id="birthday" type="date" name="birthday" value="" required>
+                                </dt>
+                            </dl>
+                        </div>
+                        <!-- Q08 性別 -->
+                        <div id="Q05" class="c-borderBtm -solid mgb5 mgb5s">
+                            <dl class="mgb5 mgb5s">
+                                <dd class="mgb2 mgb2s">
+                                    <label class="required s-M -left -ws-n -ls-2" for="gender">性別</label>
+                                </dd>
+                                <dt>
+                                    <div class="c-select">
+                                        <select id="gender" class="s-S" name="gender" required>
+                                            <option value="">選択してください</option>
+                                            <option value="男性">男性</option>
+                                            <option value="女性">女性</option>
+                                        </select>
+                                    </div>
+                                </dt>
+                            </dl>
+                        </div>
+                        <!-- Q09 氏名 -->
+                        <div id="Q09" class="c-borderBtm -solid mgb5 mgb5s">
+                            <dl class="mgb5 mgb5s">
+                                <dd class="mgb2 mgb2s">
+                                    <label class="required s-M -left -ws-n -ls-2" for="name">氏名</label>
+                                </dd>
+                                <dt>
+                                    <input id="name" class="-ls-2" name="name" type="text" placeholder="インプレーム 太郎" required>
+                                </dt>
+                            </dl>
+                        </div>
+                        <!-- Q10 メールアドレス -->
+                        <div id="Q10" class="c-borderBtm -solid mgb5 mgb5s">
+                            <dl class="mgb5 mgb5s">
+                                <dd class="mgb2 mgb2s">
+                                    <label class="required s-M -left -ws-n -ls-2" for="email">メールアドレス</label>
+                                </dd>
+                                <dt>
+                                    <input id="email" class="-ls-2" name="email" type="text" placeholder="info@impreme.jp" required=>
+                                </dt>
+                            </dl>
+                        </div>
+                        <!-- Q11 連絡先 -->
+                        <div id="Q11" class="c-borderBtm -solid mgb5 mgb5s">
+                            <dl class="mgb5 mgb5s">
+                                <dd class="mgb2 mgb2s">
+                                    <label class="required s-M -left -ws-n -ls-2" for="tel">連絡先</label>
+                                </dd>
+                                <dt>
+                                    <input id="tel" class="-ls-2" name="tel" type="text" placeholder="012-345-6789" required>
+                                </dt>
+                            </dl>
+                        </div>
+
+                        <!-- 送信ボタン -->
+                        <div class="c-contentsBox -cv-btn">
+                            <input id="submit" type="image" src="images/item/cv-btn-modal.png" value="submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
         </main><!-- //コンテンツ -->
     </div>
     <!-- footer -->
