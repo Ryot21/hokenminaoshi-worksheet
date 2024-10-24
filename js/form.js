@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const current01  = document.querySelector('.-current01');
 
     const q2Section = document.getElementById('Q02'); // Q2のセクションを取得
-    const q2RadioBtn = document.querySelectorAll('input[name="q02"]');
+    const q2RadioBtn = document.querySelectorAll('input[name="q02[]"]');
     const current02  = document.querySelector('.-current02');
 
     const q3Section = document.getElementById('Q03'); // Q3のセクションを取得
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const current03  = document.querySelector('.-current03');
 
     const q4Section = document.getElementById('Q04'); // Q4のセクションを取得
-    const q4RadioBtn = document.querySelectorAll('input[name="q04"]');
+    const q4RadioBtn = document.querySelectorAll('input[name="q04[]"]');
     const current04  = document.querySelector('.-current04');
 
     // ポップアップ関連要素の取得
