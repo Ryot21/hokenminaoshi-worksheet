@@ -57,26 +57,7 @@
 	&.-imgBg{//背景画像
 		position: relative;
 		&.-bg{//背景画像が大きくなると、コンテンツが間延びしてしまう場合
-			&.-c02{
-				overflow: hidden;
-				.imgBox{@include min(768){max-height: 1000px;}}
-			}
-			&.-c03 .Bg{
-				min-height: 1050px;
-				@include min(500) {min-height: 1150px;}
-				@include min(600) {min-height: 1320px;}
-				@include min(768) {min-height: 1340px;}
-				@include min(1100){min-height: 1740px;}
-				@include min(1200){min-height: 2080px;}
-				@include min(1600){min-height: 2310px;}
-			}
-			&.-c04{
-				overflow: hidden;
-				.imgBox{@include min(768){max-height: 940px;}}
-			}
-			&.-campaign{
-				.imgBox{@include min(768){max-height: 750px;}}
-			}
+
 		}
 		.c-contentsBox{
 			position: absolute;
@@ -95,6 +76,15 @@
 				transform: translate(-50%, -50%);
 				width: 25%;
 				@include min(768){width: 20%;}
+			}
+			&.-timer{
+				top: 47%;
+				right: 3%;
+				transform: translateY(-50%);
+				@include min(768){
+					top: 50%;
+					right: 5%;
+				}
 			}
 			// コンテンツ関係
 			&.-contents-body{//.c-contents-innerと併用
