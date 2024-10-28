@@ -78,12 +78,37 @@
 				@include min(768){width: 24%;}
 			}
 			&.-timer{
-				top: 47%;
-				right: 5.5%;
-				transform: translateY(-50%);
-				@include min(768){
+				top: 50%;
+				right: 0;
+				transform: translate(-50%, -50%);
+				@include min(500){
 					top: 45%;
+					right: -3%;
+				}
+				@include min(600){
+					right: -1%;
+				}
+				@include min(700){
+					top: 50%;
+					right: 3%;
+				}
+				@include min(800){
+					top: 54%;
 					right: 4%;
+				}
+				@include min(900){
+					top: 54.5%;
+					right: 5%;
+				}
+				@include min(1000){
+					top: 50%;
+					right: -4%;
+				}
+				@include min(1400){
+					right: -2%;
+				}
+				@include min(1600){
+					right: 0%;
 				}
 			}
 			// コンテンツ関係

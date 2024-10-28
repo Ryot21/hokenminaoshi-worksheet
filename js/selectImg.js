@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // 
-    const q3Radios = document.querySelectorAll('input[name="q03"]');
+    const q3Radios    = document.querySelectorAll('input[name="q03"]');
     const select03Img = document.querySelector('.selectImg.-q03');
 
-    const q4Radios = document.querySelectorAll('input[name="q04[]"]');
+    const q4Radios    = document.querySelectorAll('input[name="q04[]"]');
     const select04Img = document.querySelector('.selectImg.-q04');
 
     // ラジオボタンにイベントリスナーを追加

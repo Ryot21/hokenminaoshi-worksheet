@@ -88,6 +88,7 @@
         height: 0;
         opacity: 0;
         transition: opacity 0.5s ease, visibility 0.5s ease;
+        .imgBox{display: none;}
         &.show {
             height: auto;
             background: $site-color01;
@@ -97,6 +98,7 @@
             padding: 0 3%;
             margin-top: 10%;
             opacity: 1;
+            .imgBox{display: block;}
         }
     }
 

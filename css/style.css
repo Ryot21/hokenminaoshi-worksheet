@@ -419,7 +419,7 @@ h1.s-L, h2.s-L, h3.s-L, h4.s-L, h5.s-L, h6.s-L, p.s-L, a.s-L, span.s-L, label.s-
 h1.s-LL, h2.s-LL, h3.s-LL, h4.s-LL, h5.s-LL, h6.s-LL, p.s-LL, a.s-LL, span.s-LL, label.s-LL, select.s-LL, button.s-LL {
   font-size: 3rem;
 }
-@media (width >= 768px) {
+@media (width >= 1000px) {
   h1.s-LL, h2.s-LL, h3.s-LL, h4.s-LL, h5.s-LL, h6.s-LL, p.s-LL, a.s-LL, span.s-LL, label.s-LL, select.s-LL, button.s-LL {
     font-size: clamp(1.8rem, 3vw, 5.4rem);
   }
@@ -4161,14 +4161,53 @@ button.swiper-pagination-bullet {
   }
 }
 .c-contents.-imgBg .c-contentsBox.-timer {
-  top: 47%;
-  right: 5.5%;
-  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
 }
-@media (width >= 768px) {
+@media (width >= 500px) {
   .c-contents.-imgBg .c-contentsBox.-timer {
     top: 45%;
+    right: -3%;
+  }
+}
+@media (width >= 600px) {
+  .c-contents.-imgBg .c-contentsBox.-timer {
+    right: -1%;
+  }
+}
+@media (width >= 700px) {
+  .c-contents.-imgBg .c-contentsBox.-timer {
+    top: 50%;
+    right: 3%;
+  }
+}
+@media (width >= 800px) {
+  .c-contents.-imgBg .c-contentsBox.-timer {
+    top: 54%;
     right: 4%;
+  }
+}
+@media (width >= 900px) {
+  .c-contents.-imgBg .c-contentsBox.-timer {
+    top: 54.5%;
+    right: 5%;
+  }
+}
+@media (width >= 1000px) {
+  .c-contents.-imgBg .c-contentsBox.-timer {
+    top: 50%;
+    right: -4%;
+  }
+}
+@media (width >= 1400px) {
+  .c-contents.-imgBg .c-contentsBox.-timer {
+    right: -2%;
+  }
+}
+@media (width >= 1600px) {
+  .c-contents.-imgBg .c-contentsBox.-timer {
+    right: 0%;
   }
 }
 .c-contents.-imgBg .c-contentsBox.-contents-body {
@@ -6539,6 +6578,9 @@ a {
   opacity: 0;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+.c-form .selectImg .imgBox {
+  display: none;
+}
 .c-form .selectImg.show {
   height: auto;
   background: #EBF9FF;
@@ -6548,6 +6590,9 @@ a {
   padding: 0 3%;
   margin-top: 10%;
   opacity: 1;
+}
+.c-form .selectImg.show .imgBox {
+  display: block;
 }
 .c-form input[name=q01]:checked ~ .y,
 .c-form input[name=q03]:checked ~ .y {
@@ -6584,7 +6629,7 @@ a {
   background: #194299;
 }
 .p-top__left .logo, .p-top__right .logo {
-  background: url(/images/logo/impreme-logo-w-border.png);
+  background: url(../images/logo/impreme-logo-w-border.png);
   background-repeat: repeat-y;
   background-position: 35%;
   background-size: 35px;
