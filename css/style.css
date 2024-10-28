@@ -4162,7 +4162,7 @@ button.swiper-pagination-bullet {
 }
 .c-contents.-imgBg .c-contentsBox.-timer {
   top: 47%;
-  right: 3%;
+  right: 5.5%;
   transform: translateY(-50%);
 }
 @media (width >= 768px) {
