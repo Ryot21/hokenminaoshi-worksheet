@@ -9,8 +9,8 @@
 		width: 100% !important;
 		margin: auto;
 		@include min(500){width: 65% !important;}
-		@include min(1000){width: 47.5% !important;}
-		@include min(1600){max-width: 580px;}
+		@include min(1000){width: 37.5% !important;}
+		@include min(1600){max-width: 880px;}
 		&.-header{
 			@include max(768){width: 100vw;}
 		}
@@ -75,15 +75,15 @@
 				left: 15%;
 				transform: translate(-50%, -50%);
 				width: 25%;
-				@include min(768){width: 20%;}
+				@include min(768){width: 24%;}
 			}
 			&.-timer{
 				top: 47%;
 				right: 3%;
 				transform: translateY(-50%);
 				@include min(768){
-					top: 50%;
-					right: 5%;
+					top: 45%;
+					right: 4%;
 				}
 			}
 			// コンテンツ関係
@@ -93,6 +93,34 @@
 				transform: translate(-50%, -50%);
 				height: 100%;
 			}
+			&.-q03{
+				&-item01{//女性
+					top: 92%;
+					left: 86%;
+					transform: translate(-50%, -50%);
+					width: 31%;
+					z-index: 2;
+				}
+				&-item02{//男性
+					top: 90%;
+					left: 19%;
+					transform: translate(-50%, -50%);
+					width: 31%;
+				}
+				&-item03{//Aさん
+					top: 35%;
+					left: 24%;
+					transform: translate(-50%, -50%);
+					width: 45%;
+				}
+				&-serif01{
+					top: 34%;
+					left: 80%;
+					transform: translate(-50%, -50%);
+					width: 37%;
+				}
+			}
+
 			&.-cv{
 				&-btn{
 					top: 85%;

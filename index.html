@@ -27,6 +27,7 @@
     <script src="js/luminous.min.js"></script>
     <script src="js/countTimer.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/selectImg.js"></script>
     <script src="js/submit.js"></script>
 
     <!-- Google Analytics（GA4） -->
@@ -71,7 +72,7 @@
             </div>
             <div class="c-contentsBox -timer">
                 <p id="timer">
-                    <span class="num s-LL -b -f-mincho01 -yellow -ls-5">00</span>
+                    <span class="num s-LL -b -f-mincho01 -yellow -ls-2">00</span>
                     <span class="s-M -b -white">日</span>
                 </p>
             </div>
@@ -89,13 +90,13 @@
         <main class="c-container">
             <!-- ファーストビュー -->
             <div class="c-contents -imgBg">
-                <div class="w90s">
+                <div class="">
                     <div class="imgBox"><img src="images/bg/fv.png" alt="簡単１分 保険の見直しに関するアンケートに答えるだけで"></div>
                 </div>
             </div>
 
             <!-- Form01 -->
-            <form id="form1" class="c-form w90" method="post" action="https://hokenminaoshi-worksheet.form.newt.so/v1/hERuX6U3M">
+            <form id="form1" class="c-form" method="post" action="https://hokenminaoshi-worksheet.form.newt.so/v1/hERuX6U3M">
 
                 <!-- アンケートエリア -->
                 <div class="c-contents -bg-blue mgt-12 mgt-12s pdt10 pdb10 pdt10s pdb10s">
@@ -177,6 +178,26 @@
                                         </div>
                                     </li>
                                 </ul>
+                                <!-- 選択時、画像表示 -->
+                                <div class="selectImg -q03">
+                                    <div class="c-contents -imgBg">
+                                        <div class="imgBox"><img src="images/item/A/contents01_sp.png" alt="保険料の削減実例 Aさんの場合"></div>
+                                        <div class="c-contentsBox -q03-item01"><!-- 女性 -->
+                                            <div class="imgBox"><img src="images/item/A/contents01-woman.png" alt="女性"></div>
+                                        </div>
+                                        <div class="c-contentsBox -q03-item02"><!-- 男性 -->
+                                            <div class="imgBox"><img src="images/item/A/contents01-man.png" alt="男性"></div>
+                                        </div>
+                                        <div class="c-contentsBox -q03-item03"><!-- Aさん -->
+                                            <div class="imgBox"><img src="images/item/A/A.png" alt="Aさん"></div>
+                                        </div>
+                                        <div class="c-contentsBox -q03-serif01"><!-- 5,000円 -->
+                                            <div class="imgBox a-moveUp -sp2 -loop">
+                                                <img src="images/item/A/total-5000.png" alt="合計5,000円お得!!">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Q4 -->
                             <div id="Q04" class="">
