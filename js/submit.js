@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector('form'); // フォームを取得
     const submitButton = document.getElementById('submit'); // 送信ボタンを取得
-    const modal = document.getElementById('popup01'); // モーダルを取得 (IDは適宜変更)
 
     // フォームの送信を監視
     form.addEventListener('submit', function(event) {
@@ -16,13 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => {
             if (response.ok) {
                 // 送信成功時の処理
-                alert('送信完了しました。アンケートにご協力いただき誠にありがとうございます！！');  // ダイアログで送信完了を表示
+                alert('送信完了しました。アンケートにご協力いただき誠にありがとうございます！！');
 
-                // モーダルを閉じる処理
-                modal.classList.remove('visible');  // モーダルのvisibleクラスを削除して非表示にする
-
-                // 必要に応じてフォームをリセットする
-                form.reset();
+                // Thanksページへリダイレクト
+                window.location.href = 'https://impreme.jp/hokenminaoshi-worksheet/thanks.html';  // 適宜パスを変更
             } else {
                 // エラーハンドリング
                 alert('送信に失敗しました。再試行してください。');
